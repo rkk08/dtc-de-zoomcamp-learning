@@ -2,3 +2,4 @@
 
 ## Learning Notes
 - I. Docker Fundamentals: Functionality & Environment
+- II. Docker Volumes, Data Pipelines, Python
