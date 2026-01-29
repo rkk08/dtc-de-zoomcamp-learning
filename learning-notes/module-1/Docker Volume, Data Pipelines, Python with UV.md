@@ -4,6 +4,7 @@
 Containers are ephemeral by default.  
 Any files created inside a container are lost when the container exits unless persistence is explicitly configured.
 
+- - -
 
 ### Host File Operations
 Basic file creation and inspection on the host:
@@ -21,6 +22,7 @@ Notes:
 - `>>` appends to a file
 - Empty files remain empty until written to
      
+- - -
 
 ### Accessing Files from a Container
 
@@ -28,6 +30,7 @@ To read or modify host files inside Docker, files must be shared via volumes.
 
 A Python script can be used to inspect files inside a mounted directory.
 
+- - -
 
 ### Python Filesystem Access (pathlib)
 
@@ -55,6 +58,7 @@ Key concepts:
 - `==` compares values, = assigns values
 - `continue` skips the current loop iteration
 
+- - -
 
 ### Docker Volumes (Persistence Mechanism)
 
@@ -72,12 +76,13 @@ docker run -it \
 ```
 
 Explanation:
-    `-it` runs the container interactively with a terminal
-    `--rm` removes the container after exit
-    `-v $(pwd):/app` mounts the current host directory into /app
-    `--entrypoint=bash` starts a shell instead of Python
-    `python:3.13.11-slim` is a minimal Python image
+- `-it` runs the container interactively with a terminal
+- `--rm` removes the container after exit
+- `-v $(pwd):/app` mounts the current host directory into /app
+- `--entrypoint=bash` starts a shell instead of Python
+- `python:3.13.11-slim` is a minimal Python image
 
+- - -
 
 ### Host ↔ Container Relationship
 
@@ -85,6 +90,7 @@ Explanation:
     - Files created or modified in /app persist on the host
     - Files outside mounted paths remain isolated inside the container
 
+- - -
 
 ### Verification Inside Container
 
@@ -101,6 +107,7 @@ Results confirm:
     - Host files are accessible inside the container
     - File contents persist across container runs
 
+- - -
 
 ### Key Takeaways
 
@@ -110,6 +117,7 @@ Results confirm:
 - Entering the container shell is expected behavior
 - This pattern is foundational for reproducible DE workflows
 
+- - -
 
 ### TL;DR
 
