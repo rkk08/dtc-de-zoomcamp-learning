@@ -14,6 +14,7 @@ touch file1.txt file2.txt file3.txt
 echo "Hello from host" > file1.txt
 ls
 cat file1.txt
+```
 
 Notes:
 - `echo` prints to stdout
@@ -46,7 +47,7 @@ for filepath in current_dir.iterdir():
         continue
     if filepath.is_file():
         print(filepath.name, filepath.read_text(encoding="utf-8"))
-
+```
 
 Key concepts:
 - `pathlib` provides object-oriented filesystem handling
@@ -72,6 +73,7 @@ docker run -it \
   -v $(pwd):/app \
   --entrypoint=bash \
   python:3.13.11-slim
+```
 
 Explanation:
     `-it` runs the container interactively with a terminal
@@ -98,6 +100,7 @@ cd /app/test
 ls
 cat file1.txt
 python list_files.py
+```
 
 Results confirm:
 
