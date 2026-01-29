@@ -1,4 +1,4 @@
-## II. Docker Data Persistence: Volumes & Filesystem Access
+## I. Docker Data Persistence: Volumes & Filesystem Access
 
 ### Problem
 Containers are ephemeral by default.  
@@ -86,9 +86,9 @@ Explanation:
 
 ### Host ↔ Container Relationship
 
-    - Host directory is mounted into /app inside the container
-    - Files created or modified in /app persist on the host
-    - Files outside mounted paths remain isolated inside the container
+- Host directory is mounted into /app inside the container
+- Files created or modified in /app persist on the host
+- Files outside mounted paths remain isolated inside the container
 
 - - -
 
@@ -104,8 +104,8 @@ python list_files.py
 
 Results confirm:
 
-    - Host files are accessible inside the container
-    - File contents persist across container runs
+- Host files are accessible inside the container
+- File contents persist across container runs
 
 - - -
 
@@ -125,4 +125,6 @@ Use Docker volumes to run Python in isolated containers while preserving files o
 
 
 ---
+
+## II. Building Data Pipelines
 
