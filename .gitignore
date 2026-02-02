@@ -205,3 +205,22 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Shell and user configs
+.bash_history
+.bashrc
+
+# .NET caches
+.dotnet/
+
+# VS Code Remote Server (WSL)
+.vscode-server/
+
+# Temporary practice files (optional)
+practice/
+
+# Other OS/system junk
+*.log
+*.tmp
+*.swp
+
